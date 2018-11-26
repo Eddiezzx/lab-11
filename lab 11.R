@@ -30,7 +30,8 @@ ggplot(q3, aes(x1,y1)) +
   geom_smooth(method = "lm") 
 # I'm not sure if above is right plot to make for Q3. If not, the one below is a plot of fitted values vs residuals. If the plot from above is correct, please ignore this plot.
 ggplot(c)+
-  geom_point(aes(x = fit, y = res))
+  geom_point(aes(x = res, y = fit)) +
+  labs(x = "Resiuals", y = "Fitted values")
 #4
 
 boxmuller <- function(n){
